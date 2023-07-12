@@ -6,8 +6,8 @@ help <command>
 ## Índice
 
 
-New-Item....................................................
-Remove-Item.................................................
+*New-Item....................................................
+*Remove-Item.................................................
 
 
 
@@ -53,12 +53,13 @@ abreviação: ni
 
 ## Remove-Item
 
-abreviações: ri
-             rm
-             rmdir
-             del
-             erase
-             rd
+abreviações: 
+*           ri
+*           rm
+*           rmdir
+*           del
+*           erase
+*           rd
 
 
 Bibliografia
