@@ -55,6 +55,34 @@ ni
 
 ## Remove-Item
 
+Remove-Item é usado para deletar qualquer recurso dentro do sistema. Podemos interagir com a pasta que estamos utilizando no momento ou especificar um caminho para deletar este recurso de qualquer pasta do sistema.
+
+`Remove-Item -Path ".\powershell\data.txt"
+
+Deletar arquivos de documentos em um diretório:
+`Remove-Item * -Include *.doc -Exclude *1*`
+
+Este exemplo deleta todos os arquivos com extensão `.doc` e quualquer nome que não inclua `*1*` do diretório atual.
+Utilizamos o caractere `*` para especificar o conteúdo do diretório atual e utilizamos `-Include` e `-Exclude` para especificar os arquivos a serem deletados.
+
+Deletar arquivos ocultos e somente-leitura:
+`Remove-Item -Path C:\Test\hidden-RO-file.txt -Force`
+
+Este comando usa o parâmetro `-Path` para especificar o arquivo. Também é utilizado o parâmetro `-Force` para deletá-lo. Não podemos deletar arquivos `ocultos` e arquivos `somente-leitura` sem a utilização do parâmetro `-Force`.
+
+Quando precisamos deletar uma pasta que contém diversos arquivo dentro dela, a recursão é acionada e o para executar essa tarefa:
+
+``` 
+Confirmar
+O item em C:\Users\vinic\GitHub\powershell\test tem filhos e o parâmetro Recurse não foi especificado. Se você
+continuar, todos os filhos serão removidos com o item. Tem certeza de que deseja continuar?
+[S] Sim  [A] Sim para Todos  [N] Não  [T] Não para Todos  [U] Suspender  [?] Ajuda (o padrão é "S"):
+```
+
+Podemos executar a recursão manualmente para evitar a mensagem de prevenção de erros com o seguinte comando:
+
+`Remove-Item C:\Users\vinic\GitHub\powershell\test -Recurse`
+
 abreviações: 
 ```
 ri
@@ -67,5 +95,7 @@ rd
 
 Bibliografia
 
-https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-7.3
+*New-Item       https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-7.3
+*Remove-Item    https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.3
+
 
