@@ -47,19 +47,20 @@ Mode                 LastWriteTime         Length Name
 -a----        12/07/2023     02:45              0 log1.txt
 ```
 
-abreviação: ni
+abreviações: 
+-ni
 
 
 
 ## Remove-Item
 
 abreviações: 
--           ri
--           rm
--           rmdir
--           del
--           erase
--           rd
+-ri
+-rm
+-rmdir
+-del
+-erase
+-rd
 
 
 Bibliografia
