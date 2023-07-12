@@ -48,20 +48,22 @@ Mode                 LastWriteTime         Length Name
 ```
 
 abreviações: 
--ni
-
+```
+ni
+```
 
 
 ## Remove-Item
 
 abreviações: 
--ri
--rm
--rmdir
--del
--erase
--rd
-
+```
+ri
+rm
+rmdir
+del
+erase
+rd
+```
 
 Bibliografia
 
