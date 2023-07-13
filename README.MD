@@ -6,10 +6,24 @@ help <command>
 ## Índice
 
 
+-Get-Process.................................................
 -New-Item....................................................
 -Remove-Item.................................................
 
 
+
+
+## Get-Process
+
+Get-Process é utilizado para retornar todas as tarefas que estão sendo executadas pelo sistema, como o gerenciador de tarefas.
+
+Para receber esse retorno, simplesmente executamos o comando `Get-Process` ou um de seus pseudônimos
+
+pseudônimos:
+```
+gps
+ps
+```
 
 
 
@@ -23,7 +37,7 @@ Abreviadamente podemos criar um novo arquivo de texto no diretório local da seg
 
 Mas é possível especificar tipo de arquivo ou diretório, caminho onde será criado e outras coisas que podem ser consultadas na documentação.
 
-Podemos utilizar a abreviação `ni` para executar o comando e os parâmetros -Path (string), -Name (string) e -ItemType (string) para criar um novo diretório e em seguida um novo arquivo dentro deste diretório, sem que seja necessário abrir este diretório.
+Podemos utilizar o pseudônimos `ni` para executar o comando e os parâmetros -Path (string), -Name (string) e -ItemType (string) para criar um novo diretório e em seguida um novo arquivo dentro deste diretório, sem que seja necessário abrir este diretório.
 
 `ni -Path ".\" -Name "logfiles" -ItemType "directory"`
 
@@ -47,10 +61,11 @@ Mode                 LastWriteTime         Length Name
 -a----        12/07/2023     02:45              0 log1.txt
 ```
 
-abreviações: 
+pseudônimos: 
 ```
 ni
 ```
+
 
 
 ## Remove-Item
@@ -83,7 +98,7 @@ Podemos executar a recursão manualmente para evitar a mensagem de prevenção d
 
 `Remove-Item C:\Users\vinic\GitHub\powershell\test -Recurse`
 
-abreviações: 
+pseudônimos: 
 ```
 ri
 rm
