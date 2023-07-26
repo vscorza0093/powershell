@@ -7,6 +7,7 @@ help <command>
 
 ```
 -Get-Process.................................................
+-Invoke-Item.................................................
 -New-Item....................................................
 -Remove-Item.................................................
 ```
@@ -23,6 +24,20 @@ pseudônimos:
 ```
 gps
 ps
+```
+
+
+## Invoke-Item
+
+Invoke-Item executa a ação predefinida no item especificado. Por exemplo, executa um ficheiro executável ou abre um ficheiro de documento na aplicação associada ao tipo do ficheiro, também podemos abrir diretórios.
+
+`Invoke-Item c:\Github`
+
+Esse comando abrirá, no explorer, o diretório Github que está dentro de C:
+
+pseudônimos:
+```
+ii
 ```
 
 
@@ -110,6 +125,7 @@ rd
 
 Bibliografia
 
+*Invoke-Item    https://learn.microsoft.com/pt-pt/powershell/module/microsoft.powershell.management/invoke-item?view=powershell-7.3&viewFallbackFrom=powershell-6
 *New-Item       https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-7.3
 *Remove-Item    https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.3
 
