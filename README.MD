@@ -6,11 +6,38 @@ help <command>
 ## Índice
 
 ```
+Function (?)
+
+function.....................................................
+
+
+Commands
+
 -Get-Process.................................................
 -Invoke-Item.................................................
 -New-Item....................................................
 -Remove-Item.................................................
+-Set-Alias...................................................
 ```
+
+
+## function
+
+resumo do que explorei de functions até o momento
+
+São literalmente funções que podem ser usadas para executar uma lista de tarefas ou o que for necessário, de maneira automatizada.
+
+Meu objetivo era criar alias para alguns comandos git, através do cmdlet `Set-Alias`, porém não é possível aplicar um alias a um comando externo ao PowerShell. Descobri que este problema poderia ser resolvido através das functions.
+
+function [name] { body }
+
+```
+function git-status { git status }
+```
+
+Agora o comando `git-status` é reconhecido como `cmdlet` e é parâmetro válido para o Set-Alias. Porém, assim como Set-Alias, function só existe durante a sessão atual ativa do PowerShell.
+
+
 
 
 
@@ -123,10 +150,38 @@ erase
 rd
 ```
 
+
+## Set-Alias
+
+Set-Alias [-Name] <string> [-Value] <string>
+
+Define um apelido para qualquer qualquer cmdlet ou comando existente na sessão atual do PowerShell.
+
+O Set-Alias cmdlet cria ou altera um alias para um cmdlet ou um comando, como uma função, script, arquivo ou outro executável. 
+
+Um alias criado ou alterado por Set-Alias não é permanente e só está disponível durante a sessão atual do PowerShell. Quando a sessão do PowerShell é fechada, o alias é removido.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Bibliografia
 
+*Functions      https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.3
 *Invoke-Item    https://learn.microsoft.com/pt-pt/powershell/module/microsoft.powershell.management/invoke-item?view=powershell-7.3&viewFallbackFrom=powershell-6
 *New-Item       https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/new-item?view=powershell-7.3
 *Remove-Item    https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/remove-item?view=powershell-7.3
+*Set-Alias      https://learn.microsoft.com/pt-br/powershell/module/microsoft.powershell.utility/set-alias?view=powershell-7.3
 
 
